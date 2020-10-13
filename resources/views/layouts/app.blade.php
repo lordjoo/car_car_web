@@ -5,6 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
     <title>الشركة الفلسطينية للعناية بالسيارات</title>
+    <link rel="icon" href="{{ asset('img/car-wash.png') }}">
+    <link rel="favicon" href="{{ asset('img/car-wash.png') }}">
     <link rel="stylesheet" href="//cdn.materialdesignicons.com/5.4.55/css/materialdesignicons.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@500;700;800&display=swap" rel="stylesheet">
     <!-- Font Awesome -->
@@ -26,10 +28,11 @@
 <!--Navbar-->
 <nav class="navbar navbar-expand-lg navbar-light white">
 
-    <div class="container flex-row-reverse">
+    <div class="container">
 
-        <a class="navbar-brand" href="#">
-            LOGO
+        <a class="d-flex align-items-center navbar-brand" href="/">
+            <img style="width: 30px" src="{{ asset('img/car-wash.png') }}" alt="">
+            <span class="mt-2 ml-2">PCCC</span>
         </a>
 
         <!-- Collapse button -->
@@ -42,7 +45,7 @@
         <div class="collapse navbar-collapse flex-row-reverse" id="basicExampleNav">
 
             <!-- Left -->
-            <ul class="navbar-nav mr-auto">
+            <ul class="navbar-nav ml-auto">
                 <li class="nav-item">
                     <a class="nav-link waves-effect" href="#" target="_blank">Link </a>
                 </li>
@@ -53,32 +56,6 @@
                     <a class="nav-link waves-effect" href="#" target="_blank">Link </a>
                 </li>
 
-            </ul>
-
-            <!-- Right -->
-            <ul class="navbar-nav nav-flex-icons">
-                <li class="nav-item">
-                    <a href="https://www.facebook.com/mdbootstrap" class="nav-link waves-effect" target="_blank">
-                        <i class="fab fa-facebook-f"></i>
-                    </a>
-                </li>
-                <li class="nav-item">
-                    <a href="https://twitter.com/MDBootstrap" class="nav-link waves-effect" target="_blank">
-                        <i class="fab fa-twitter"></i>
-                    </a>
-                </li>
-                <li class="nav-item">
-                    <a href="https://github.com/mdbootstrap/bootstrap-material-design" class="nav-link waves-effect"
-                       target="_blank">
-                        <i class="fab fa-github"></i>
-                    </a>
-                </li>
-                <li class="nav-item">
-                    <a href="https://mdbootstrap.com/docs/jquery/newsletter/"
-                       class="nav-link border border-light rounded waves-effect mr-2" target="_blank">
-                        <i class="fas fa-envelope mr-1"></i>Newsletter
-                    </a>
-                </li>
             </ul>
 
         </div>
