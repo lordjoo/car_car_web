@@ -16,7 +16,8 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('welcome');
 });
-
+Route::get('/reserve',[\App\Http\Controllers\FrontController::class,'reserveView'])->name('reserve');
+Route::get('/bundles/getPrices/{id?}',[\App\Http\Controllers\BundleController::class,'getPrices'])->name('bundle.getPrices');
 Route::group(['middleware'=>"auth",'prefix'=>"admin"],function () {
     Route::get('/',[\App\Http\Controllers\HomeController::class,'home']);
     Route::get('/orders',[\App\Http\Controllers\HomeController::class,'orders'])->name('orders');

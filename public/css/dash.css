@@ -1,0 +1,37 @@
+.md-form {
+    direction: rtl;
+}
+
+.md-form label {
+    left: inherit;
+    right: 0;
+}
+
+.md-form .prefix~input,
+.md-form .prefix~textarea {
+    margin-right: 3rem;
+    margin-left: inherit;
+}
+
+.md-form .prefix~label {
+    margin-right: 3rem;
+    margin-left: inherit;
+}
+.dropdown-content li{
+    text-align: right !important;
+}
+
+.select-wrapper span.caret{
+    right: auto !important;
+    left: 0 !important;
+}
+.select-wrapper ul {
+    padding-right: 0 !important;
+    padding-left: initial;
+}
+
+.bundle.btn-outline-deep-orange:not([disabled]):not(.disabled):active, .btn-outline-deep-orange:not([disabled]):not(.disabled).active, .show > .btn-outline-deep-orange.dropdown-toggle.active{
+    background-color: #fd7e14 !important;
+    color: white !important;
+}
+

@@ -10,71 +10,8 @@
     </style>
 @endpush
 @section('page')
-<!--Navbar-->
-<nav class="navbar navbar-expand-lg navbar-light white">
 
-    <div class="container flex-row-reverse">
-
-        <a class="navbar-brand" href="#">
-            LOGO
-        </a>
-
-        <!-- Collapse button -->
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#basicExampleNav"
-                aria-controls="basicExampleNav" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-
-        <!-- Links -->
-        <div class="collapse navbar-collapse flex-row-reverse" id="basicExampleNav">
-
-            <!-- Left -->
-            <ul class="navbar-nav mr-auto">
-                <li class="nav-item">
-                    <a class="nav-link waves-effect" href="#" target="_blank">Link </a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link waves-effect" href="#" target="_blank">Link </a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link waves-effect" href="#" target="_blank">Link </a>
-                </li>
-
-            </ul>
-
-            <!-- Right -->
-            <ul class="navbar-nav nav-flex-icons">
-                <li class="nav-item">
-                    <a href="https://www.facebook.com/mdbootstrap" class="nav-link waves-effect" target="_blank">
-                        <i class="fab fa-facebook-f"></i>
-                    </a>
-                </li>
-                <li class="nav-item">
-                    <a href="https://twitter.com/MDBootstrap" class="nav-link waves-effect" target="_blank">
-                        <i class="fab fa-twitter"></i>
-                    </a>
-                </li>
-                <li class="nav-item">
-                    <a href="https://github.com/mdbootstrap/bootstrap-material-design" class="nav-link waves-effect"
-                       target="_blank">
-                        <i class="fab fa-github"></i>
-                    </a>
-                </li>
-                <li class="nav-item">
-                    <a href="https://mdbootstrap.com/docs/jquery/newsletter/"
-                       class="nav-link border border-light rounded waves-effect mr-2" target="_blank">
-                        <i class="fas fa-envelope mr-1"></i>Newsletter
-                    </a>
-                </li>
-            </ul>
-
-        </div>
-
-    </div>
-
-</nav>
-<!--/.Navbar-->
-<div class="banner z-depth-1">
+    <div class="banner z-depth-1">
     <div class="container my-5">
 
 
@@ -229,7 +166,7 @@
                             {{ $bundle->desc }}
                         </p>
                         <hr class="orange w-50">
-                        <form action="">
+                        <form action="{{ route('reserve') }}">
                             <div class="cars-select">
                                 <p class="grey-text mt-0">
                                     اختر نوع السيارة
