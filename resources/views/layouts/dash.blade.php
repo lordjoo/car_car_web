@@ -26,7 +26,7 @@
 <!--Navbar-->
 <nav class="navbar navbar-expand-lg navbar-light white">
     <div class="container">
-        <a class="navbar-brand" href="#">
+        <a class="navbar-brand" href="/admin">
             <span class="mdi mdi-speedometer"></span>
             لوحة التحكم
         </a>
@@ -61,10 +61,11 @@
                     </a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">
+                    <a class="nav-link" onclick="document.getElementById('logout_form').submit()">
                         <span class="mdi mdi-logout"></span>
                         تسجيل الخروج
                     </a>
+                    <form action="{{ route('logout') }}"  method="post" id="logout_form">@csrf</form>
                 </li>
             </ul>
             <!-- Links -->
@@ -78,6 +79,16 @@
 <!--/.Navbar-->
 @yield('page')
 
+<!-- Don't Remove (Will disable the app) -->
+<div class="fixed-bottom text-center bg-dark white-text">
+    <div class="container">
+        Powered By
+        <a target="_blank" href="https://uni-devs.tech" class="red-text">
+            <img src="https://uni-devs.tech/img/logo2.png" style="height: 30px" alt="">
+            UniDevs
+        </a>
+    </div>
+</div>
 <!-- SCRIPTS -->
 <!-- JQuery -->
 <script type="text/javascript" src="{{ asset('/js/jquery-3.4.1.min.js') }}"></script>

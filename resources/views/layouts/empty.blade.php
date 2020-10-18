@@ -25,45 +25,7 @@
 @stack('css')
 </head>
 <body>
-<!--Navbar-->
-<nav class="navbar navbar-expand-lg navbar-light white">
 
-    <div class="container">
-
-        <a class="d-flex align-items-center navbar-brand" href="/">
-            <img style="width: 30px" src="{{ asset('img/car-wash.png') }}" alt="">
-            <span class="mt-2 ml-2">PCCC</span>
-        </a>
-
-        <!-- Collapse button -->
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#basicExampleNav"
-                aria-controls="basicExampleNav" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-
-        <!-- Links -->
-        <div class="collapse navbar-collapse flex-row-reverse" id="basicExampleNav">
-
-            <!-- Left -->
-            <ul class="navbar-nav ml-auto">
-                <li class="nav-item">
-                    <a class="nav-link waves-effect" href="#" target="_blank">Link </a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link waves-effect" href="#" target="_blank">Link </a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link waves-effect" href="#" target="_blank">Link </a>
-                </li>
-
-            </ul>
-
-        </div>
-
-    </div>
-
-</nav>
-<!--/.Navbar-->
 
 @yield('page')
 

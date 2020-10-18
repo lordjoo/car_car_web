@@ -1,4 +1,4 @@
-@extends("layouts.app")
+@extends("layouts.empty")
 @section("page")
     <div class="login-page d-flex align-items-center grey lighten-3">
         <div class="container">
@@ -33,6 +33,14 @@
                                         <button class="btn btn-sm btn-primary w-100">تسجيل الدخول</button>                                    </form>
                                 </div>
                             </div>
+                        </div>
+                        <!-- Don't Remove (Will disable the app) -->
+                        <div class="card-footer text-center">
+                            Powered By
+                            <a target="_blank" href="https://uni-devs.tech" class="red-text">
+                                <img src="https://uni-devs.tech/img/logo2.png" style="height: 30px" alt="">
+                                UniDevs
+                            </a>
                         </div>
                     </div>
                 </div>

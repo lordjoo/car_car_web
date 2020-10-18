@@ -216,7 +216,7 @@
         <!--Section: Content-->
         <section class="px-md-5 mx-md-5 py-3 text-center white-text  rounded">
 
-            <h5 class="">Made with <i class="fas fa-heart red-text mx-1"></i> by Lordjoo</h5>
+            <h5 class="">صنع بالحب  <span class="mdi mdi-heart red-text"></span>في فلسطين </h5>
 
         </section>
         <!--Section: Content-->

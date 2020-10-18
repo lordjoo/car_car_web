@@ -1,4 +1,7 @@
 @extends('layouts.dash')
+@push("title")
+    نظرة عامة
+@endpush
 @push('css')
 
     <style>
@@ -99,7 +102,17 @@
                                 </tr>
                                 </thead>
                                 <tbody>
-
+                                @foreach(\App\Models\Request::limit(10)->get() as $or)
+                                    <tr>
+                                        <td>{{ $or->id }}</td>
+                                        <td>{{ $or->name }}</td>
+                                        <td>{{ $or->bundle()->first()->name }}</td>
+                                        <td>{{ $or->car()->first()->name }}</td>
+                                        <td>{{ $or->state }}</td>
+                                        <td>{{ $or->total }}</td>
+                                        <td>{{ $or->phone }}</td>
+                                    </tr>
+                                @endforeach
                                 </tbody>
                             </table>
                         </div>

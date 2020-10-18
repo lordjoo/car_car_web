@@ -46,4 +46,17 @@ class BundleController extends Controller
         return response()->json(['status'=>true]);
     }
 
+    public function destroy($id)
+    {
+        Bundle::destroy($id);
+        return redirect()->route('bundles.index');
+    }
+
+    public function update(Request $request, $id)
+    {
+        Bundle::findOrFail($id)->update($request->all());
+        return redirect()->route('bundles.index');
+
+    }
+
 }

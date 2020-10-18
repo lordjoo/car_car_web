@@ -9,7 +9,7 @@
                             <h2 class="font-weight-bold">احجز زيارة الان</h2>
                         </div>
                         <div class="col-md-12">
-                            <form method="post" action="" class="row">
+                            <form method="post" action="{{ route('reserve') }}" class="row">
                                 @csrf
                                 <div class="col-md-6">
                                     <div class="md-form">
@@ -21,6 +21,12 @@
                                     <div class="md-form">
                                         <input required   id="phone" type="text" name="phone" class="form-control">
                                         <label for="phone">رقم الهاتف</label>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="md-form">
+                                        <input required   id="email" type="email" name="email" class="form-control">
+                                        <label for="email">البريد الالكتروني</label>
                                     </div>
                                 </div>
                                 <div class="col-md-6">
@@ -127,7 +133,8 @@
                         if (res.length) {
                             res.forEach(el=>{
                                 let ele = `<label class="d-flex flex-column bundle btn btn-outline-deep-orange form-check-label">
-                                            <input required   onclick="printPrice(${el.price})" data-price="${el.price}" value="${el.id}" name="car_type_id" class="car-radio form-check-input" type="radio"
+                                            <input required   onclick="printPrice(${el.price})" data-price="${el.price}"
+                                            value="${el.id}" name="car_type_id" class="car-radio form-check-input" type="radio"
                                                    autocomplete="off">
                                             <span class="mdi mdi-car-multiple  mdi-24px"></span>
                                             <span>${el.name} ${el.price}₪</span>

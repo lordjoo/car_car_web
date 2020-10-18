@@ -13,7 +13,8 @@ class HomeController extends Controller
 
     public function orders()
     {
-        return view('auth.orders');
+        $orders = \App\Models\Request::paginate(15);
+        return view('auth.orders',compact('orders'));
     }
 
 }

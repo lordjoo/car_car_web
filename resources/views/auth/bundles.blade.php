@@ -45,9 +45,10 @@
                                             type="button"
                                             class="addPriceBtn py-1 px-2 rounded-circle btn btn-indigo mr-2 btn-sm m-0">
                                             <span class="mdi mdi-cash mdi-24px"></span></button>
-                                        <button type="button"
+                                        <button onclick="document.getElementById('delete_form_{{$b->id}}').submit()" type="button"
                                                 class="py-1 px-2 rounded-circle btn btn-danger red darken-3 btn-sm m-0">
                                             <span class="mdi mdi-trash-can mdi-24px"></span></button>
+                                        <form id="delete_form_{{$b->id}}" action="{{ route('bundles.destroy',$b->id) }}" method="post">@csrf @method('delete')</form>
                                     </td>
                                 </tr>
                             @endforeach
@@ -145,14 +146,24 @@
                         </div>
                     </div>
                 </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-sm btn-secondary" data-dismiss="modal">Close</button>
-                    <button type="button" class="btn btn-sm btn-primary">Save changes</button>
-                </div>
+                <form id="update_form" action="{{ route('bundles.update') }}" method="post">
+                    @csrf @method("patch")
+                    <div class="modal-body">
+                        <div class="row">
+                            <div class="col-md-12">
+                                <div class="md-form"><label for="b_name"></label><input placeholder="اسم الباقة" type="text" name="name" id="b_name" class="form-control"></div>
+                                <div class="md-form"><label for="b_desc"></label><input placeholder="وصف الباقة" name="desc" id="b_desc" type="text" class="form-control"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-sm btn-secondary" data-dismiss="modal">حسسنا</button>
+                        <button type="submit" class="btn btn-sm btn-primary">حفظ التغيرات</button>
+                    </div>
+                </form>
             </div>
         </div>
     </div>
-    <div class="p">Fuck You</div>
 @endsection
 
 @push('js')
@@ -166,6 +177,10 @@
                 let id = $(this).data("id");
                 let desc = $(this).data("desc");
                 $("#bundle-name").text(name);
+                let new_action = encodeURI($("#update_form").attr("action")+'/'+id)
+                $("#update_form").attr('action',new_action);
+                $("#b_name").val(name);
+                $("#b_desc").val(desc);
                 $("#prices-list").empty();
                 $("#bundle_id").val(id);
                 $.ajax({
